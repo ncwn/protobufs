@@ -42,6 +42,11 @@ The firmware regen script expects `nanopb-0.4.9/generator-bin/protoc` in the fir
 - **Conflict risk:** Low / Medium / High when merging upstream
 -->
 
+### meshtastic/admin.proto
+- **What:** Added `SelfciusEpoch` admin payload variant tag 68 with read/set action, origin epoch, sequence floor, and success fields.
+- **Why:** SELFCIUS officer epoch provisioning needs an explicit admin schema instead of overloading unrelated Meshtastic fields.
+- **Conflict risk:** Medium - shared admin schema; regenerate firmware outputs and coordinate clients before relying on runtime behavior.
+
 ### CLAUDE.md
 - **What:** Added v4 fork workflow, protobuf regeneration guidance, and a V4 Modifications log for this nested submodule.
 - **Why:** Future agents editing protobuf schemas need the same fork/upstream tracking and change-log discipline as the other v4 Meshtastic submodules.

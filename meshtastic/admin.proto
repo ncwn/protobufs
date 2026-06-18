@@ -474,6 +474,11 @@ message AdminMessage {
     KeyVerificationAdmin key_verification = 67;
 
     /*
+     * Read or set SELFCIUS officer epoch state.
+     */
+    SelfciusEpoch selfcius_epoch = 68;
+
+    /*
      * Tell the node to factory reset config everything; all device state and configuration will be returned to factory defaults and BLE bonds will be cleared.
      */
     int32 factory_reset_device = 94;
@@ -522,6 +527,21 @@ message AdminMessage {
      */
     SensorConfig sensor_config = 103;
   }
+}
+
+/*
+ * SELFCIUS officer epoch provisioning request/response.
+ */
+message SelfciusEpoch {
+  enum Action {
+    READ = 0;
+    SET = 1;
+  }
+
+  Action action = 1;
+  uint32 origin_epoch = 2;
+  uint32 sequence_floor = 3;
+  bool success = 4;
 }
 
 /*
