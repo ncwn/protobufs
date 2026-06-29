@@ -38,7 +38,7 @@ The firmware regen script expects `nanopb-0.4.9/generator-bin/protoc` in the fir
 
 ### meshtastic/file.proto
 - **What:** Brief description of the change
-- **Why:** Reason this modification is needed for the v4 project
+- **Why:** Reason this modification is needed for SELFCIUS
 - **Conflict risk:** Low / Medium / High when merging upstream
 -->
 
