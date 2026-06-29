@@ -1,6 +1,6 @@
-# protobufs (v4 fork)
+# protobufs (SELFCIUS fork)
 
-> This is a fork of `meshtastic/protobufs` on the `v4` branch.
+> This is a fork of `meshtastic/protobufs` on the `selfcius/main` branch.
 > When merging upstream releases, consult the V4 Modifications section
 > to understand which conflicts are expected vs accidental.
 
@@ -25,11 +25,11 @@ The firmware regen script expects `nanopb-0.4.9/generator-bin/protoc` in the fir
 
 ## Rules
 
-- Always merge upstream, **never rebase v4**.
+- Always merge upstream, **never rebase selfcius/main**.
 - Keep `origin` as `ncwn/protobufs` and `upstream` as `meshtastic/protobufs`.
 - Update the V4 Modifications section below when changing protobuf schemas or generation options.
 - After changing `.proto` or `.options`, regenerate the parent firmware outputs and commit the generated files with the schema change.
-- Do not reuse existing Meshtastic admin fields for SELFCIUS behavior; add explicit schema when a concrete v4 requirement needs it.
+- Do not reuse existing Meshtastic admin fields for SELFCIUS behavior; add explicit schema when a concrete SELFCIUS requirement needs it.
 - Treat protobuf changes as cross-client compatibility changes. Coordinate firmware, scripts, and future mobile/backend consumers before enabling runtime behavior.
 
 ## V4 Modifications
@@ -48,9 +48,12 @@ The firmware regen script expects `nanopb-0.4.9/generator-bin/protoc` in the fir
 - **Conflict risk:** Medium - shared admin schema; regenerate firmware outputs and coordinate clients before relying on runtime behavior.
 
 ### CLAUDE.md
-- **What:** Added v4 fork workflow, protobuf regeneration guidance, and a V4 Modifications log for this nested submodule.
-- **Why:** Future agents editing protobuf schemas need the same fork/upstream tracking and change-log discipline as the other v4 Meshtastic submodules.
+- **What:** Added SELFCIUS fork workflow, protobuf regeneration guidance, and a V4 Modifications log for this nested submodule.
+- **Why:** Future agents editing protobuf schemas need the same fork/upstream tracking and change-log discipline as the other SELFCIUS Meshtastic submodules.
 - **Conflict risk:** Low - documentation-only fork guidance.
+- **What:** Renamed the tracked integration branch from `v4` to `selfcius/main` for handoff clarity.
+- **Why:** Future intERLab-AIT maintainers need project-specific branch names rather than the old wrapper-era `v4` label.
+- **Conflict risk:** Low - branch guidance only; the old `v4` branch remains as a temporary fallback.
 
 ### New Files
 
