@@ -59,7 +59,7 @@ The firmware regen script expects `nanopb-0.4.9/generator-bin/protoc` in the fir
 
 <!-- Files added that don't exist in upstream -->
 
-- `CLAUDE.md` — local agent guidance for the `ncwn/protobufs` v4 fork.
+- `CLAUDE.md` — local agent guidance for the `ncwn/protobufs` SELFCIUS fork.
 - `AGENTS.md` — symlink to `CLAUDE.md`.
 
 ### Deleted Files
